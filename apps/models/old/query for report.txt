@@ -1,0 +1,63 @@
+SELECT DISTINCT
+e.Id,
+c.RegId,
+e.CreatedBy,
+e.CreatedOn,
+e.BillDate,
+g.NameValue,
+e.TotalAmount,
+e.Discount,
+(SELECT
+ CONVERT(money,SUM(GSCDetails.qty*(GSCDetails.CostPayer-(GSCDetails.CostPayer*(GSCDetails.Discount/100)))),1)as 'Total'
+FROM
+dbo.GSCDetails INNER JOIN GSCSBillRels ON GSCSBillRels.GSCDetailId = GSCDetails.Id
+WHERE GSCDetails.RegId = c.RegId  AND GSCSBillRels.RecordStatus = 1 AND GSCDetails.CostPayer != 0 AND GSCSBillRels.BillId = e.Id
+) AS 'GSCTotalAmount',
+e.CodeValue,
+b.FirstName +' '+ b.MiddleName +' '+ b.LastName AS 'PatientsName',
+e.SubTotalAmount,
+e.RoundAmount
+FROM
+dbo.PatientRegs a
+LEFT JOIN dbo.Patients b ON a.PatientId = b.Id
+LEFT JOIN dbo.GSCDetails c ON c.RegId = a.Id
+LEFT JOIN dbo.GSCSBillRels d ON d.GSCDetailId = c.Id
+LEFT JOIN dbo.Bills e ON d.BillId = e.Id
+LEFT JOIN dbo.Payments f ON f.BillId = e.Id
+LEFT JOIN dbo.Institutions g ON c.RemInstitutionId = g.Id
+WHERE g.NameValue IS NOT NULL AND e.RecordStatus != 0  AND e.BillDate = @DateRecord AND e.CreatedBy = @UserRecord
+
+
+
+
+
+SELECT a.NameValue,SUM(GSCTotalAmount) 'Total' FROM
+(SELECT DISTINCT
+e.Id,
+c.RegId,
+e.CreatedBy,
+e.CreatedOn,
+e.BillDate,
+g.NameValue,
+e.TotalAmount,
+e.Discount,
+(SELECT
+ CONVERT(money,SUM(GSCDetails.qty*(GSCDetails.CostPayer-(GSCDetails.CostPayer*(GSCDetails.Discount/100)))),1)as 'Total'
+FROM
+dbo.GSCDetails INNER JOIN GSCSBillRels ON GSCSBillRels.GSCDetailId = GSCDetails.Id
+WHERE GSCDetails.RegId = c.RegId  AND GSCSBillRels.RecordStatus = 1 AND GSCDetails.CostPayer != 0 AND GSCSBillRels.BillId = e.Id
+) AS 'GSCTotalAmount',
+e.CodeValue,
+b.FirstName +' '+ b.MiddleName +' '+ b.LastName AS 'PatientsName',
+e.SubTotalAmount,
+e.RoundAmount
+FROM
+dbo.PatientRegs a
+LEFT JOIN dbo.Patients b ON a.PatientId = b.Id
+LEFT JOIN dbo.GSCDetails c ON c.RegId = a.Id
+LEFT JOIN dbo.GSCSBillRels d ON d.GSCDetailId = c.Id
+LEFT JOIN dbo.Bills e ON d.BillId = e.Id
+LEFT JOIN dbo.Payments f ON f.BillId = e.Id
+LEFT JOIN dbo.Institutions g ON c.RemInstitutionId = g.Id
+WHERE g.NameValue IS NOT NULL AND e.RecordStatus != 0 AND e.BillDate = @DateRecord AND e.CreatedBy = @UserRecord) a 
+GROUP BY a.NameValue

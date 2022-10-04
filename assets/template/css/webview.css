@@ -1,0 +1,8 @@
+@charset "utf-8";
+.Header {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	font-style: italic;
+	font-weight: bold;
+	text-transform: capitalize;
+}

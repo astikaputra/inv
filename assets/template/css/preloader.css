@@ -1,0 +1,33 @@
+
+/* ----------------------------------------------------------------------------
+* The Sliding Menu Effect - (http://www.entheosweb.com/tutorials/css/default.asp)
+* This notice must stay intact for use
+* Visit http://www.entheosweb.com/ for more
+------------------------------------------------------------------------------ */
+
+/*	* { margin: 0; padding: 0; }
+	body { padding: 40px; background: #eee; font-family: Arial; font-size: 16px; line-height: 18px; }*/
+#preloader {
+	background: #000;
+	position:fixed;
+	left:0px; 
+	top:0px; 
+	width:100%; 
+	height:100%; 
+	text-align:center;
+	color:#fff;
+}
+#preloader div {
+	width:400px;
+	margin:auto;
+	height: 12px;
+	text-align:center;
+	border: 4px solid #111;
+	overflow:hidden;
+}
+#preloader_image {
+	position: relative;
+	left:0px;
+	top:-10px;
+}
+

@@ -1,0 +1,152 @@
+.center-content {
+	background-color: rgba(255, 255, 255, 0.2);
+	width:80%;
+	height:50%;
+	position:absolute;
+	top:25%;
+}
+
+.app{
+	position:absolute;
+	width:40%;
+	top:30%;
+	font:"Segoe UI";
+	color:#FFF;
+	font-size:35px;
+	line-height:150%;
+	text-shadow:5px 3px 7px #000;
+}
+
+
+#container.login-screen {
+  width: 100%;
+}
+#login-wraper {
+margin: 10px 10px 70px!important;
+
+}
+
+.logo{
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 15px;
+	position: center;
+	bottom:10px;
+	left: 50%;
+	text-align:center;
+	}
+
+.form-signin
+{
+   
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    width: 360px;
+    height: 360px;
+	left: 50%;
+	top: 50%;
+	margin-left: -180px;
+	margin-top: -200px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 60px;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    z-index: 5;
+}
+.login-title
+{
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+	text-shadow:#fff 0px 1px 0, #B6B8B7 0 -1px 0;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+
+/* !Animated 
+------------------------------------------------------------------ */
+#login-logo {
+  display: inline-block;
+  width: 60%;
+  height: 50%;
+  margin: 10px 0;
+}
+
+#login-logo {
+  -webkit-animation-delay: 0;
+     -moz-animation-delay: 0;
+       -o-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+       -o-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  -moz-animation-name: bounce;
+  -ms-animation-name: bounce;
+  -o-animation-name: bounce;
+  animation-name: bounce;
+}

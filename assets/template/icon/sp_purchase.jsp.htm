@@ -1,0 +1,154 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><script language="Javascript">
+
+bName = navigator.appName;
+
+var wpr =(window.print) ? 1 : 0;
+
+function PrintPage(){
+   
+   if(wpr) 
+     window.print();
+   else 
+      vbPrintPage();
+}        
+
+function OperaPrint(){
+  window.print();
+  window.close();
+}
+
+function saveUrlFile(strURL)
+{
+  var RetVal;
+  if (typeof strURL == 'object')
+      imgOrURL = strURL.src;
+    
+    window.win = open (strURL);
+    win.document.execCommand("SaveAs");
+    
+    saveUrlFile=RetVal;
+    
+}
+
+
+function Save2File(){
+     if (bName == "Netscape")
+        fncDownLoad();
+     else
+        VbSaveAs();
+     }
+
+if (!wpr) with (document) 
+      {
+       writeln('<OBJECT ID="WB" WIDTH="0" HEIGHT="0" CLASSID="clsid:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>');
+       writeln('<' + 'SCRIPT LANGUAGE="VBScript">');
+       writeln('Sub window_onunload');
+       writeln('On Error Resume Next');
+       writeln('Set WB = nothing');
+       writeln('End Sub');
+       writeln( 'Sub vbPrintPage');
+       
+       writeln('   OLECMDID_PRINT = 6');
+       writeln('   OLECMDEXECOPT_DONTPROMPTUSER = 2');
+       writeln('   OLECMDEXECOPT_PROMPTUSER = 1');
+       writeln('   On Error Resume Next');
+       writeln('   WB.ExecWB OLECMDID_PRINT, OLECMDEXECOPT_PROMPTUSER');6
+       writeln('End Sub');
+       writeln('<' + '/SCRIPT>');             
+       }
+if (wpr) 
+      document.writeln('<OBJECT ID="WB" WIDTH="0" HEIGHT="0" CLASSID="clsid:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>');
+with (document)
+     {
+       writeln('<' + 'SCRIPT LANGUAGE="VBScript">');
+       writeln('Sub window_onunload');
+       writeln('On Error Resume Next');
+       writeln('Set WB = nothing');
+       writeln('End Sub');
+       writeln( 'Sub vbSaveAs');
+       writeln('   OLECMDID_SAVEAS = 4');
+       writeln('   OLECMDEXECOPT_DONTPROMPTUSER = 2');
+       writeln('   OLECMDEXECOPT_PROMPTUSER = 1');
+       writeln('   On Error Resume Next');
+       writeln('   WB.ExecWB OLECMDID_SAVEAS , OLECMDEXECOPT_PROMPTUSER');4
+       writeln('End Sub');
+       writeln('<' + '/SCRIPT>');             
+       }       
+</script></head><body bgcolor="#ffffff"><object id="WB" classid="clsid:8856F961-340A-11D0-A96B-00C04FD705A2" height="0" width="0"></object>
+<script language="VBScript">
+Sub window_onunload
+On Error Resume Next
+Set WB = nothing
+End Sub
+Sub vbSaveAs
+   OLECMDID_SAVEAS = 4
+   OLECMDEXECOPT_DONTPROMPTUSER = 2
+   OLECMDEXECOPT_PROMPTUSER = 1
+   On Error Resume Next
+   WB.ExecWB OLECMDID_SAVEAS , OLECMDEXECOPT_PROMPTUSER
+End Sub
+</script>
+
+
+<title>klikBCA Individual Save Page</title><meta name="GENERATOR" content="Microsoft Visual Studio 6.0">
+
+  <table border="0" cellpadding="0" cellspacing="0" width="600">
+    <tbody><tr>
+      <td width="70"><img src="sp_purchase.jsp_files/logo_top1.gif" height="72" width="70"></td>
+      <td width="10"><img src="sp_purchase.jsp_files/LOGO_TOP_anim.gif" height="72" width="10"></td>
+      <td width="285"><img src="sp_purchase.jsp_files/LOGO_TOP.gif" height="72" width="285"></td>
+      <td background="sp_purchase.jsp_files/logo_top_back.gif" width="235"><img src="sp_purchase.jsp_files/logo_top_back.gif" height="72" width="235"></td>
+    </tr>
+  </tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="600"> <tbody><tr> <td colspan="3">
+<hr></td></tr>
+<tr bgcolor="#FFFFFF"><td colspan="3" align="center"><b>BUKTI TRANSAKSI PEMBELIAN PULSA ISI ULANG</b> </td></tr>
+<tr bgcolor="#f0f0f0"><td width="200">Tanggal</td><td width="5"> : </td><td>&nbsp; 26-11-2011</td></tr>
+<tr><td width="200">Jam</td><td>:</td><td> &nbsp; 09:45:58</td></tr>
+<tr bgcolor="#f0f0f0"><td width="200">Nomor Referensi </td><td width="5"> :</td><td> &nbsp; 6EA1C1F0-A396-87A4-4233-FAE16720DF96</td></tr>
+<tr><td width="200">Pembelian</td><td>:</td><td> &nbsp; FREN/HEPI/MOBI</td></tr>
+<tr bgcolor="#f0f0f0"><td width="200">Nomor Handphone</td><td width="5"> :</td><td> &nbsp; 08881053478</td></tr>
+<tr><td width="200">Nominal Voucher</td><td width="5"> :</td><td> &nbsp; Rp.  &nbsp; &nbsp; &nbsp;100.000,00</td></tr>
+<tr bgcolor="#f0f0f0"><td width="200">Nomor Urut</td><td width="5"> :</td><td> &nbsp; 017349</td></tr>
+<tr><td width="200">Status</td><td>:</td><td> &nbsp; TRANSAKSI BERHASIL</td></tr>
+
+</tbody></table><table border="0" cellpadding="0" cellspacing="0" width="760">
+  <tbody><tr>
+    <td>
+      <div align="right">
+        <table border="0" cellpadding="0" cellspacing="0" width="760">
+          <tbody><tr>
+            <td valign="bottom" width="192"><img src="sp_purchase.jsp_files/bottom1.gif" height="31" width="192"></td>
+            <td background="sp_purchase.jsp_files/bottom2.htm" valign="top" width="535">
+              <table border="0" cellpadding="0" cellspacing="0" width="75%">
+                <tbody><tr>
+                  <td><div align="right"><font face="Verdana" size="1">Copyright © 2000</font></div></td>
+                  <td width="75"><center><font face="Verdana" size="1"><img src="sp_purchase.jsp_files/bca_logo.gif" height="23" width="69"></font></center></td>
+                  <td width="150"><div align="left"><font face="Verdana" size="1">All Rights Reserved</font></div></td>
+                  <td><div align="right"><img src="sp_purchase.jsp_files/bottom3.gif" height="31" width="23"></div></td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+    </td>
+  </tr>
+  <tr><td></td></tr>
+  <tr><td></td></tr>
+</tbody></table>
+
+
+<script language="Javascript">
+if (navigator.appName == "Opera"){
+  window.location="../save_purchase.jsp?id=save";
+} else {
+  Save2File();
+  window.close();
+}
+</script>
+
+
+</body></html>
